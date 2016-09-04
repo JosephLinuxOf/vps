@@ -51,20 +51,20 @@ echo ATENCION Digite o seu ip !!
 read ip
  
  
-echo "http_port 80" > /etc/squid/squid.conf
-echo "http_port 8080" >> /etc/squid/squid.conf
-echo "acl accept url_regex -i $ip" >> /etc/squid/squid.conf
-echo "acl y url_regex -i claro" >> /etc/squid/squid.conf
-echo "acl y1 url_regex -i .com.br" >> /etc/squid/squid.conf
-echo "acl all src 0.0.0.0/0.0.0.0" >> /etc/squid/squid.conf
-echo "http_access allow accept" >> /etc/squid/squid.conf
-echo "http_access allow y" >> /etc/squid/squid.conf
-echo "http_access allow y1" >> /etc/squid/squid.conf
-echo "http_access deny all" >> /etc/squid/squid.conf
+echo "http_port 80" > /etc/squid/squid3.conf
+echo "http_port 8080" >> /etc/squid/squid3.conf
+echo "acl accept url_regex -i $ip" >> /etc/squid/squid3.conf
+echo "acl y url_regex -i claro" >> /etc/squid/squid3.conf
+echo "acl y1 url_regex -i .com.br" >> /etc/squid/squid3.conf
+echo "acl all src 0.0.0.0/0.0.0.0" >> /etc/squid/squid3.conf
+echo "http_access allow accept" >> /etc/squid/squid3.conf
+echo "http_access allow y" >> /etc/squid/squid3.conf
+echo "http_access allow y1" >> /etc/squid/squid3.conf
+echo "http_access deny all" >> /etc/squid/squid3.conf
  
 service ssh restart
  
-service squid restart
+service squid3 restart
 
 echo Procedimentos feitos com exito. crie um usuário e teste pra ver se está funcionando corretamente!!
 
