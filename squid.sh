@@ -9,8 +9,10 @@ ubuntu16 () {
 	echo "" >> sshd_config	
 	echo "Port 22" >> sshd_config	
 	
-	ip=$(curl ifconfig.me)
-
+	clear
+	echo "INSIRA O IP DO VPS"
+	read ip
+	
 	echo "# PORTAS DE ACESSO NO SQUID" > /etc/squid/squid.conf
 	echo "http_port 80" >> /etc/squid/squid.conf
 	echo "http_port 8080" >> /etc/squid/squid.conf
@@ -71,7 +73,9 @@ ubuntu () {
 	echo "" >> sshd_config	
 	echo "Port 22" >> sshd_config		
 	
-	ip=$(curl ifconfig.me)
+	clear
+	echo "INSIRA O IP DO VPS"
+	read ip
 
 	echo "# PORTAS DE ACESSO NO SQUID" > /etc/squid3/squid.conf
 	echo "http_port 80" >> /etc/squid3/squid.conf
@@ -136,7 +140,9 @@ debian () {
 	echo "" >> sshd_config	
 	echo "Port 22" >> sshd_config		
 	
-	ip=$(curl ifconfig.me)
+	clear
+	echo "INSIRA O IP DO VPS"
+	read ip
 
 	echo "# PORTAS DE ACESSO NO SQUID" > /etc/squid3/squid.conf
 	echo "http_port 80" >> /etc/squid3/squid.conf
@@ -155,7 +161,7 @@ debian () {
 	echo "" >> /etc/squid3/squid.conf
 	echo "" >> /etc/squid3/squid.conf
 	echo "# CACHE DO SQUID" >> /etc/squid3/squid.conf
-	echo "cache_mem 20 MB" >> /etc/squid3/squid.conf
+	echo "cache_mem 200 MB" >> /etc/squid3/squid.conf
 	echo "maximum_object_size_in_memory 32 KB" >> /etc/squid3/squid.conf
 	echo "maximum_object_size 1024 MB" >> /etc/squid3/squid.conf
 	echo "minimum_object_size 0 KB" >> /etc/squid3/squid.conf
