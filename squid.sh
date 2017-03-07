@@ -9,9 +9,7 @@ ubuntu16 () {
 	echo "" >> sshd_config	
 	echo "Port 22" >> sshd_config	
 	
-	clear
-	echo "INSIRA O IP DO VPS"
-	read ip
+	ip=$(wget -qO - icanhazip.com)
 	
 	echo "# PORTAS DE ACESSO NO SQUID" > /etc/squid/squid.conf
 	echo "http_port 80" >> /etc/squid/squid.conf
@@ -73,10 +71,8 @@ ubuntu () {
 	echo "" >> sshd_config	
 	echo "Port 22" >> sshd_config		
 	
-	clear
-	echo "INSIRA O IP DO VPS"
-	read ip
-
+	ip=$(wget -qO - icanhazip.com)
+	
 	echo "# PORTAS DE ACESSO NO SQUID" > /etc/squid3/squid.conf
 	echo "http_port 80" >> /etc/squid3/squid.conf
 	echo "http_port 8080" >> /etc/squid3/squid.conf
@@ -140,10 +136,8 @@ debian () {
 	echo "" >> sshd_config	
 	echo "Port 22" >> sshd_config		
 	
-	clear
-	echo "INSIRA O IP DO VPS"
-	read ip
-
+	ip=$(wget -qO - icanhazip.com)
+	
 	echo "# PORTAS DE ACESSO NO SQUID" > /etc/squid3/squid.conf
 	echo "http_port 80" >> /etc/squid3/squid.conf
 	echo "http_port 8080" >> /etc/squid3/squid.conf
