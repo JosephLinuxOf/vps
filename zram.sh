@@ -1,5 +1,4 @@
 #!/bin/bash
-#
 
 not_root() {
     echo "ERROR: You have to be root to execute this script"
