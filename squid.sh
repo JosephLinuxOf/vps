@@ -1,7 +1,7 @@
 ubuntu16 () {
 	
 	apt-get update
-	apt-get install -y squid curl nano sysv-rc-conf
+	apt-get install -y squid curl nano sysv-rc-conf ulatency ulatencyd
 	
 	cd /etc/ssh/
 
@@ -63,7 +63,7 @@ ubuntu16 () {
 ubuntu () {
 	
 	apt-get update
-	apt-get install -y squid3 curl nano sysv-rc-conf
+	apt-get install -y squid3 curl nano sysv-rc-conf ulatency ulatencyd
 	
 	cd /etc/ssh/
 
@@ -128,7 +128,7 @@ ubuntu () {
 debian () {
 	
 	apt-get update
-	apt-get install -y squid3 curl nano sysv-rc-conf
+	apt-get install -y squid3 curl nano sysv-rc-conf ulatency ulatencyd
 	
 	cd /etc/ssh/
 
