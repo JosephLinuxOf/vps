@@ -1,7 +1,8 @@
 # Installing PPA repositories on Debian-based distributions
 # Created by Joe Linux
-# If you are using Kali Linux, change from repo to http, as below:
-# deb http://http.kali.org/kali kali-rolling main contrib non-free
+# If you are using Kali Linux, change from http to repo, as below:
+# deb http://repo.kali.org/kali kali-rolling main contrib non-free
+# Only if the installation take
 
 
 DIR=/usr/bin/
