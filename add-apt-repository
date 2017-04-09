@@ -1,4 +1,7 @@
 #!/bin/bash
+# Instalação re respositórios PPA em distribuições baseadas no Debian
+# Criado por Joe Linux
+
 if [ $# -eq 1 ]
 NM=`uname -a && date`
 NAME=`echo $NM | md5sum | cut -f1 -d" "`
