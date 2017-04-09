@@ -1,6 +1,4 @@
-#!/bin/bash
-# Instalação re respositórios PPA em distribuições baseadas no Debian
-# Criado por Joe Linux
+# An open source project to add PPA repositories in your debian machine
 
 if [ $# -eq 1 ]
 NM=`uname -a && date`
@@ -14,6 +12,9 @@ then
     echo "$0 ppa:user/ppa-name"
   else
     echo "$ppa_name"
+    source=$(grep -w $ppa_name /etc/apt/sources.list | wc -l)
+  if [ "$source" -ge "1" ] ; then
+	exit 0
     echo "deb http://ppa.launchpad.net/$ppa_name/ubuntu trusty main" >> /etc/apt/sources.list
     apt-get update >> /dev/null 2> /tmp/${NAME}_apt_add_key.txt
     key=`cat /tmp/${NAME}_apt_add_key.txt | cut -d":" -f6 | cut -d" " -f3`
