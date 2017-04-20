@@ -36,7 +36,7 @@ iptables -A OUTPUT -p tcp --dport 10000 -j ACCEPT
 
 # Bloqueando elementos não costantes nas regras
 
-# iptables -A INPUT -p tcp --syn -j DROP
+iptables -A INPUT -p tcp --syn -j DROP
 
 # A regra abaixo limita o numero de conexes SSH vindas do mesmo IP
 # iptables -A INPUT -p tcp --syn --dport 22 -m connlimit --connlimit-above 1 -j REJECT
